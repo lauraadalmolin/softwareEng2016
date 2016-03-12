@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04/03/2016, 20:40:30
+    Author     : Aluno
+*/ 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#cabecalho {
+    
+    background-color: skyblue;
+    height: 50px;
+    width: 99.9%;
+    border-style: outset;
+    border-width: 5px 5px 5px 5px;
+    border-color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.menu {
+    margin-left: 30px;
+       
+}
+
+#corpo {
+    
+    // line-height: 10px;
+    background-color: silver;
+    height: 400px;
+    width: 99.9%;
+    border-style: outset;
+    border-width: 5px 5px 5px 5px;
+    border-color: white;
+    
+}
+
+#rodape {
+    background-color: blueviolet;
+    height: 50px;
+    width: 99.9%;
+    border-style: outset;
+    border-width: 5px 5px 5px 5px;
+    border-color: white;
+    text-align: center;
+    padding-top: 10px;
+    
+    
+}
+
+#geral {
+   position: absolute;
+   top: 10%;
+   left: 7%;
+       
+}
+
+body {
+    //text-align: center;
+    background-color: midnightblue;
+    font-family: "Century Gothic";
+}

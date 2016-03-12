@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Título	</title>
+		<meta charset="UTF-8">
+		<script src="arquivo.js"> </script>
+		<!-- js externo -->
+		<script>
+			function clicar() {
+				alert('oi!');
+			}
+			function boasvindas() {
+				//alert('boas vindas!');
+				window.open("http://www.google.com")
+			}
+			// window.onbeforeunload = function() {
+			//	return('não vai embora não...');
+			//}
+			function calcula() {
+				var input1 = document.getElementById('numero1');
+				var input2 = document.getElementById('numero2');
+				var numero1 = parseInt(input1.value);
+				var numero2 = parseInt(input2.value);
+				var div = document.getElementById('resultado');
+				div.innerHTML = numero1 + numero2;
+
+			}
+			var resultado ="";
+			var oldresultado ="";
+			function digitou(x) {
+				if (resultado != 0) resultado = 0;
+				resultado = oldresultado+x;
+				document.getElementById('visor').value = resultado;
+				oldresultado = resultado;
+			}
+			function solucao() {
+				document.getElementById('visor').value = eval(resultado);
+			}
+			function limpar(){
+				resultado ="";
+				oldresultado ="";
+				document.getElementById('visor').value = resultado;
+			}
+		</script>
+		<link href="" rel="stylesheet"> </link>
+		<style>
+			body {
+				background-color: rgb(200,205,177);
+			}
+
+			table {
+				font-size: 30px;
+			}
+
+			.amarelodefundo {
+				background-color: yellow;
+				font-family: "Century Gothic";
+
+			}
+
+			#totranquilotofavoravel {
+				font-weight: bold;
+				color: red;
+			}
+
+			/*input[type="text"] {
+				background-color: orange;
+			}*/
+			input[name*="igor"] {
+				background-color: blue;
+			}
+
+			div[name="abacaxi"] p {
+				background-color: purple;
+			}
+
+		</style>
+	</head>
+	<body>
+		<!-- se eu quiser dar boas vindas
+		<body onload="boasvindas()" onbeforeunload=""> -->
+		
+		<!-- exemplo do que não se deve fazer logo abaixo -->
+		
+		<table>
+			<tr>
+				<td colspan="3"> <input type="text" id="visor"> </td>
+			</tr>
+			<tr>
+				<td> <button onclick="digitou('9')"> 9 </button></td>
+				<td> <button onclick="digitou('8')"> 8 </button></td>
+				<td> <button onclick="digitou('7')"> 7 </button></td>
+				
+			</tr>
+			<tr>
+				<td> <button onclick="digitou('6')"> 6 </button></td>
+				<td> <button onclick="digitou('5')"> 5 </button></td>
+				<td> <button onclick="digitou('4')"> 4 </button></td>
+				
+			</tr>
+			<tr>
+				<td> <button onclick="digitou('3')"> 3 </button></td>
+				<td> <button onclick="digitou('2')"> 2 </button></td>
+				<td> <button onclick="digitou('1')"> 1 </button></td>
+			</tr>
+			<tr>
+				<td> <button onclick="digitou('0')"> 0 </button></td>
+				<td> <button onclick="digitou('+')"> + </button></td>
+				<td> <button onclick="digitou('-')"> - </button></td>
+			</tr>
+			<tr>
+				<td colspan="1"> <button onclick='solucao()'> = </button></td>
+				<td colspan="2"> <button onclick='limpar()'> CE </button></td>
+			</tr>
+		</table>
+		<br>
+
+
+
+		
+
+		Digite um número: <input type="number" id ="numero1">
+		Digite outro número: <input type="number" id ="numero2">
+		<button onclick="calcula()">Calcula</button>
+		<br>
+		<div style="background-color: gray; color: yellow;" id="resultado"> </div>
+
+
+
+
+
+
+
+
+		<div name="abacaxi">
+			<p> p dentro</p>
+		</div>
+		<div>
+			<p> p dentro</p>
+		</div>
+		<p> p normal </p>
+		<p class="amarelodefundo"> UAHEUAHEAUHE </p>
+		
+		<div id="totranquilotofavoravel"> djkandajkn </div>
+		
+		<br>
+		
+		<button onclick="clicar()"> clique aqui... </button>
+		
+		<h1> Título gigante </h1>
+		
+		<h2> Título menor </h2>
+		
+		<h6> Pequeno </h6>
+		
+		<a href="http://www.google.com" target="_blank"> Google em uma nova aba </a>
+		
+		<br>
+		
+		<hr>
+		
+		<p> Parágrafo </p>
+
+		<table border="1">
+			<caption> Título Tabela </caption>
+			<tr>
+				<td colspan="2">Coluna 1</td>
+				<td>Coluna 2</td>
+			</tr>
+			<tr>
+				<td>Coluna 1</td>
+				<td><b>Coluna 2</b></td>
+			</tr>
+
+		</table>
+		<br>
+		<div> AHEAUH </div>
+		<br>
+		<ul>
+			<li> item 1 </li>
+			<li> item 2 </li>
+			<li> item 3 </li>
+		</ul>
+		<ol type="A">
+			<li> item 1 </li>
+			<li> item 2 </li>
+			<li> item 3 </li>
+		</ol>
+
+		<img src="C:\abacaxi.jpg" height="100px" width="100px">
+
+		<form action="" method="">
+			Texto: <input type="text" name="igorcampo-texto" value="valor_do_campo_de_texto" required="required">
+			Texto: <input type="text" name="tinder" value="valor_do_campo_de_texto" required="required">
+			Texto: <input type="text" name="igor2campo-texto" value="valor_do_campo_de_texto" required="required">
+			Radio: <input type="radio" value="opcao1">
+			<textarea rows="10" cols="20"> Campo de texto </textarea
+			<select name="combo1">
+				<option value="ocpcao11"> Opcao 1 </option>
+				<option value="ocpcao12"> Opcao 2 </option>
+			</select>
+			<input type="checkbox" name="checkbox1" value="DBO"> DBO <br>
+			<input type="checkbox" name="checkbox2" value="ES"> ES <br>
+			<input type="password" name="senha" value="senha">
+			<input type="date">
+			<input type="submit" value="enviar">
+
+
+
+		</form>
+		<br>
+		<pre>
+			ayega
+			auehau
+			auhaeuxc
+		</pre>
+		<br>
+		<input  list="browsers">
+		<datalist  id="browsers">
+		<option  value="Internet  Explorer">
+		<option  value="Firefox">
+		<option  value="Chrome">
+		<option  value="Opera">
+		<option  value="Safari">
+		</datalist >
+		<samp> Saida como de programa </samp>
+
+
+	</body>
+</html>
+

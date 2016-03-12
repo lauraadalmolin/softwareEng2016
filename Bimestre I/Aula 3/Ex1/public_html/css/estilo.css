@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/03/2016, 15:00:40
+    Author     : Aluno
+*/ 
+/*
+Escrever quadrados coloridos nos cantos da tela
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#yellow {
+    background-color: yellow;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    padding-left: 0;
+    padding-top: 0;
+    
+}
+#black {
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+}
+#red {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+}
+#blue {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  
+}
+

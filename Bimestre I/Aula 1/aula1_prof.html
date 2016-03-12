@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- titulo da pagina-->
+	<title> Titulo </title>
+	<!-- acentuação -->
+	<meta charset="utf-8">
+
+	<!-- js externo. Pendente: criar o arquivo arquivo.js -->
+	<!-- <script src="arquivo.js"> </script> -->
+
+
+	<!-- Link interessante sobre css http://www.maujor.com/tutorial/insetut.php -->
+
+	<!-- css externo. Pendente arquivo estilo.css  -->
+	<!-- <link rel="stylesheet" type="text/css" href="estilo.css"> -->
+
+	<!-- Trecho de JS interno -->
+	<script type="text/javascript">
+		// funcao acionada quando o evento onclick eh disparado
+		function clicar(){
+			alert('oiiiiiiiiiiii....?! tudo blzinha!!!! globooooo');
+		}
+
+        // funcao de boas vindas. Eh invocada quando a pagina eh carregada
+        function boasvindas(){
+           	alert('boas vindas');
+        }
+
+        window.onbeforeunload =  function (){
+           	return "oioio";
+        }
+
+        // funcao que separa 2 numeros
+        function calcula(){
+           	var input1 = document.getElementById('nro1');
+           	var input2 = document.getElementById('nro2');
+           	var nro1 = parseInt(input1.value);
+           	var nro2 = parseInt(input2.value);
+           	var div = document.getElementById('resultado');
+           	div.innerHTML = nro1+nro2;
+        }
+
+		// variavel global
+		var resultado = "";
+
+		function digitou(x){
+			resultado = resultado + x;
+			document.getElementById('visor').value = resultado;
+
+		}
+
+		function solucao(){
+			document.getElementById('visor').value = eval(resultado);
+            //resultado = "";
+        }
+
+        function limpar(){
+           	resultado = "";
+           	document.getElementById('visor').value = resultado;
+        }
+
+        </script>
+
+        <!-- CSS interno-->
+        <style>      
+        	/* É possível customizar tags */
+        	table {
+        		font-size: 30px;
+        	}
+
+        	/* Utilizamos classe (.nomedaclasse) quando queremos customizar um conjunto de tags*/
+        	.azuldefundo {
+        		background-color: blue;
+        		font-family: Arial;
+
+        	}
+
+        	/* Utilizamos id (hastag) quando queremos customizar somente um único componente em especial */
+        	#totranquilotofavoravel {
+        		font-weight: bold;
+        		color: red;
+        	}
+
+        	/* Customiza todo o input que tem a cadeia de caracteres igor dentro do name. ex: igor, igorpereira */
+        	input[name*='igor'] {
+        		background-color: orange;
+        	}
+       	
+        	/*Link interessante sobre seletores css:*/
+        	/* http://maujor.com/tutorial/seletores_css21_parte1.php */
+        	
+        	/* Link interessante de pseudoclasses */
+        	/* http://imasters.com.br/artigo/12207/css/seletores-do-css-pseudo-classes/ */
+
+        	/* Customiza todo p contido dentro de um div com o nome xxx */
+        	div[name="xxx"] p {
+        		background-color: purple;
+        	}
+
+        	p {
+        		background-color: blue;
+        	}
+        </style>
+
+    </head>
+    <!-- se eu quiser dar boas vindas no momento de carregar a página-->
+    <!-- <body onload="boasvindas()">  -->
+    <body>
+    	<table>
+    		<tr>
+    			<td colspan="3"> <input type="text" readonly id="visor"></td>
+    			<tr>
+
+    				<tr>
+    					<td> <button onclick="digitou('9')"> 9 </button> </td>
+    					<td> <button onclick="digitou('8')"> 8 </button> </td>
+    					<td> <button onclick="digitou('7')"> 7  </button></td>
+    				</tr>
+    				<tr>
+    					<td> <button onclick="digitou('6')"> 6 </button> </td>
+    					<td> <button onclick="digitou('5')"> 5 </button> </td>
+    					<td> <button onclick="digitou('4')"> 4  </button></td>
+    				</tr>
+    				<tr>
+    					<td> <button onclick="digitou('3')"> 3 </button> </td>
+    					<td> <button onclick="digitou('2')"> 2 </button> </td>
+    					<td> <button onclick="digitou('1')"> 1  </button></td>
+    				</tr>
+    				<tr>
+    					<td> <button onclick="digitou('0')"> 0 </button> </td>
+    					<td> <button onclick="digitou('+')"> + </button> </td>
+    					<td> <button onclick="digitou('-')"> - </button></td>
+    				</tr>
+    				<tr>
+    					<td colspan="1"> <button onclick="limpar()"> ce </button> </td>
+    					<td colspan="2"> <button onclick="solucao()"> = </button> </td>
+    				</tr>
+    			</table>
+
+    <!-- Parte que soma dois numeros -->
+	<!-- 
+        Digite um nro: <input type="number" id="nro1" >
+        Digite outro nro: <input type="number" id="nro2">
+        <button onclick="calcula()"> Calcula </button>
+    -->      
+
+    <!--Exemplo de CSS inline. Utilizando a tag style -->
+ 	<!--       
+        <div style="background-color:gray;color:white">oiasdhfasdhfuasi </div>
+    -->
+
+    <!-- Exemplo de seleção de inputs que possuem a cadeia de caracteres "igor" como pertencente ao nome do input-->
+	<!--
+		Texto: <input type="text" name="igor" value="Valor do Campo de texto....">
+		Texto: <input type="text" name="tinder" value="Valor do Campo de texto....">
+		Texto: <input type="text" name="igorpereira" value="Valor do Campo de texto....">
+		Texto: <input type="text" name="xxxigor" value="Valor do Campo de texto....">
+		<button onclick="clicar()"> clique aqui....</button>
+	-->
+
+	<p> P NORMAL </p>
+	<div name="xxx">
+		<p>P ROXO </p>
+	</div>
+	<div>
+		<p> P em um div sem name</p>
+	<div>
+
+	<!--  Titulos -->
+    <!-- 
+  		<h1> Titulo Gigante... </h1>
+  		<h2> </h2>
+  		<h6> </h6>
+	-->
+
+  	<!-- Links -->
+  	<!-- <a href="http://www.google.com" target="_blank"> Google em nova aba</a> -->
+
+	<!-- Quebra de linha --> 	
+  	<!-- <br> -->
+
+  <!-- Linha horizontal -->
+  <!-- <hr> -->
+
+  <!-- Paragrafo -->
+  <!-- <p> Parágrafo </p> -->
+
+  <!-- Tabela -->
+  <!--
+  <table border="1">
+      <caption> Titulo Tabela </caption>
+      <tr>
+          <td colspan="2">Coluna1 </td>
+          <td>Coluna2 </td>
+      </tr>
+
+      <tr >
+          <td>Coluna1 </td>
+          <td>Coluna2</td>
+      </tr>
+  </table>
+-->
+
+<!-- Div -->
+<!-- <div>dsfijsadoifjaisdofjoisa </div> -->
+
+<!-- Lista não ordenada -->
+<!--
+  <ul>
+    <li> item 1 </li>
+    <li> item 2 </li>
+  </ul>
+-->
+
+<!-- Lista Ordenada -->
+<!--
+  <ol type="A">
+    <li> item 1 </li>
+    <li> item 2</li>
+  </ol>
+-->
+
+<!-- Imagem -->
+<!--
+  <img src="http://cdn1-www.comingsoon.net/assets/uploads/gallery/deadpool/deadpool_ver10.jpg" height="100px" width="100px" >
+-->
+
+<!-- Formulario-->
+<form action="" method=""> 
+	<!-- Campo de texto -->
+	Texto: <input type="text" name="campo_texto" value="Valor do Campo de texto...."> 
+
+	<!-- Radio -->
+	<!-- Radio: <input type="radio" value="opcao1"> <br> -->
+
+	<!-- caixa de texto -->
+	<!-- <textarea rows="10" cols="20"> Campo de texto </textarea> <br> -->
+
+	<!-- Combo -->
+	<!--
+      <select name="combo1">
+          <option value="opcao11"> Opcao 1 </option>
+          <option value="opcao12"> Opcao 2 </option>
+      </select>
+  -->
+
+  <!-- Checkbox -->
+     <!-- 
+    <input type="checkbox" name="checkbox1" value="DBO"> DBO <br>
+	<input type="checkbox" name="checkbox2" value="ES"> ES <br>
+-->
+<!-- Data -->
+<!-- <input type="date"> -->
+
+<!-- Senha -->
+<!-- <input type="password" name="senha" value="senha"> -->
+
+<!-- Botao de submissao -->
+<input type="submit" value="Enviar">
+</form>
+
+
+<!-- Tag de autocompletar (html5). Pode não funcionar em toodos os navegadores -->
+<!--
+<input list="browsers">
+-->
+<!--
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+-->
+
+<!--
+<samp> Saida como de programa </samp>
+-->
+
+</body>
+</html>

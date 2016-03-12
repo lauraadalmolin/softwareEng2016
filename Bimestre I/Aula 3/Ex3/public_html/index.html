@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/estilo.css"/>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <div id="form">
+        <form onsubmit="return valida()">
+           <input type="text" placeholder="Nome" id="nome"> <br>
+           <input type="text" placeholder="E-mail" id="email" onkeyup="validaEmail()"> <br>
+           <input type="text" placeholder="Dia" id="dia" maxlength="2"> / <input type="text" placeholder="Mês" id="mes" maxlength="2"> / <input type="text" placeholder="Ano" id="ano" maxlength="4" ><br>
+           <input type="text" placeholder="CPF" id="cpf" onkeyup="mascaraCPF()" maxlength="14"> <br>
+           <input type="password" placeholder="Senha" id="senha" onkeyup="validaSenha()" maxlength="5" > <br>
+           <input type="submit" name="enviar"  value="enviar">
+        </form>
+        </div>
+    </body>
+</html>
