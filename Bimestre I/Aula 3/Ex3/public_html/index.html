@@ -15,12 +15,19 @@ and open the template in the editor.
     <body>
         <div id="form">
         <form onsubmit="return valida()">
-           <input type="text" placeholder="Nome" id="nome"> <br>
-           <input type="text" placeholder="E-mail" id="email" onkeyup="validaEmail()"> <br>
-           <input type="text" placeholder="Dia" id="dia" maxlength="2"> / <input type="text" placeholder="Mês" id="mes" maxlength="2"> / <input type="text" placeholder="Ano" id="ano" maxlength="4" ><br>
-           <input type="text" placeholder="CPF" id="cpf" onkeyup="mascaraCPF()" maxlength="14"> <br>
-           <input type="password" placeholder="Senha" id="senha" onkeyup="validaSenha()" maxlength="5" > <br>
-           <input type="submit" name="enviar"  value="enviar">
+           
+            <h1 id="title"> Formulário para prestar serviços de assassino </h1> <br>
+            <table class="table">
+                <tr><td> <input type="text" placeholder="Nome" id="nome" size="120"> </td></tr>
+                <tr><td> <input type="text" placeholder="E-mail" id="email" onkeyup="validaEmail()" size="120"></td></tr>
+                <tr><td> <input type="text" placeholder="Data" id="data" onkeyup="mascaraData()"  maxlength="10" size="120"></td></tr>
+                <tr><td>  <input type="text" placeholder="CPF" id="cpf" onkeyup="mascaraCPF()" maxlength="14" size="120"></td></tr>
+                <tr><td> <input type="password" placeholder="Senha" id="senha" onkeyup="validaSenha()" maxlength="5" size="120" > </td></tr>
+                <tr><td> <br> </td> </tr>
+                <tr><td>  <input id="button" type="submit" name="enviar"  value="Enviar para análise"></td></tr>
+         
+          
+            </table>
         </form>
         </div>
     </body>

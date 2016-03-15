@@ -7,7 +7,35 @@ and open the template in the editor.
     Created on : 11/03/2016, 16:24:55
     Author     : Aluno
 */
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-image: url("http://data.whicdn.com/images/221131095/large.jpg");
+    font-family: Century Gothic;
+}
 #form {
+    font-family: Century Gothic;
+    border-style: outset;
+    padding: 50px 50px 50px 50px;
+    background-color: mediumslateblue;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+     
+}
+#button {
     
+}
+
+#title{
+    color: darkslateblue;
+    text-align: center;
     
+}
+.table {
+    text-align: center;
 }

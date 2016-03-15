@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/03/2016, 15:33:12
+    Author     : Laura
+*/
+body {
+    align-content: center;
+    background-image: url("http://data.whicdn.com/images/213742756/large.jpg");
+}
+#square1 {
+    position: absolute;
+    top: 5%;
+    left: 20%;  
+}
+
+#square2 {
+    position: absolute;
+    top: 5%;
+    right: 20%;  
+}
+
+#rec1 {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 1900px;
+    
+}
+#square3 {
+    position: absolute;
+    top: 55%;
+    right: 20%; 
+}
+#square4{
+    position: absolute;
+    top: 55%;
+    left: 20%; 
+}
+#rec2{
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    width: 1900px;
+}
+.settings {
+    text-align: center;
+    font-family: Century Gothic;
+    border-style: outset; 
+   
+}
+.standard {
+   
+    background-color: gainsboro;
+    color: darkslateblue;
+    padding: 20px 50px 20px 50px;
+       
+}
+
+.title {
+    background-color: darkslateblue;
+    color: white;
+    padding: 20px 50px 20px 50px;
+    font-size:20px;
+}
